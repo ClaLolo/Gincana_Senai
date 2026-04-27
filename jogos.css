@@ -1,0 +1,130 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #fff8fc;
+  padding: 30px;
+  color: #333;
+}
+
+.top-banner {
+  display: block;
+  max-width: 1100px;
+  width: 100%;
+  margin: 0 auto 30px auto;
+  border-radius: 25px;
+}
+
+
+/* HEADER */
+.header {
+  max-width: 1100px;
+  margin: 0 auto 30px auto;
+  background: white;
+  padding: 18px 30px;
+  border-radius: 20px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  color: #3f22ec;
+  font-weight: bold;
+}
+
+.menu {
+  display: flex;
+  gap: 20px;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #555;
+  font-weight: 500;
+}
+
+.menu a:hover {
+  color: #3f22ec;
+}
+
+/* CARDS */
+.card-box {
+  max-width: 900px;
+  margin: 0 auto 30px auto;
+  background: white;
+  padding: 40px;
+  border-radius: 25px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+}
+
+.card-box h2 {
+  text-align: center;
+  color: #3f22ec;
+  margin-bottom: 25px;
+}
+
+/* FORM */
+.form-jogo {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-jogo label {
+  color: #3f22ec;
+  font-weight: bold;
+}
+
+.form-jogo select {
+  padding: 14px;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  background: #fafafa;
+}
+
+.form-jogo button {
+  margin-top: 10px;
+  padding: 14px;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #fa58a7, #3f22ec);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.form-jogo button:hover {
+  opacity: 0.9;
+}
+
+/* MENSAGEM */
+.mensagem {
+  margin-top: 15px;
+  text-align: center;
+  font-weight: bold;
+  color: #3f22ec;
+}
+
+/* TABELA */
+.tabela-jogos {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tabela-jogos th {
+  background: #3f22ec;
+  color: white;
+  padding: 12px;
+}
+
+.tabela-jogos td {
+  padding: 12px;
+  text-align: center;
+  border-bottom: 1px solid #eee;
+}
