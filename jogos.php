@@ -51,10 +51,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <header class="header">
   <div class="logo">🏆 Circuito SENAI</div>
   <nav class="menu">
-   <a href="index.html">início</a>
-    <a href="#sobre">Sobre</a>
-    <a href="#modalidades">Modalidades</a>
-    <a href="#cronograma">Cronograma</a>
+    <a href="index.html">início</a>
+    <a href="index.html#sobre">Sobre</a>
+    <a href="index.html#modalidades">Modalidades</a>
+    <a href="index.html#cronograma">Cronograma</a>
     <a href="jogos.php">Cadastrar Jogos</a>
     <a href="classificacao.php">Classificação</a>
   </nav>
