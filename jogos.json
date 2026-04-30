@@ -1,0 +1,26 @@
+[
+    {
+        "equipe1": "9° ANO",
+        "equipe2": "1° EM",
+        "modalidade": "VOLEIBOL",
+        "vencedor": "3° EM"
+    },
+    {
+        "equipe1": "2° EM",
+        "equipe2": "9° ANO",
+        "modalidade": "CABO DE GUERRA",
+        "vencedor": "2° EM"
+    },
+    {
+        "equipe1": "1° EM",
+        "equipe2": "9° ANO",
+        "modalidade": "VOLEIBOL",
+        "vencedor": "1° EM"
+    },
+    {
+        "equipe1": "1° EM",
+        "equipe2": "2° EM",
+        "modalidade": "TÊNIS DE MESA",
+        "vencedor": "1° EM"
+    }
+]

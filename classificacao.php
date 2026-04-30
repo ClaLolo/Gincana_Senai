@@ -1,17 +1,43 @@
 <?php
+
+$arquivo = "jogos.json";
+
+$jogos = [];
+
+if (file_exists($arquivo)) {
+    $jogos = json_decode(file_get_contents($arquivo), true);
+}
+
+
+// PONTUAÇÃO INICIAL
 $classificacao = [
-    ["turma" => "2° EM", "pontos" => 6],
-    ["turma" => "1° EM", "pontos" => 3],
-    ["turma" => "9° ANO", "pontos" => 2],
-    ["turma" => "3° EM", "pontos" => 1]
+    ["turma" => "9° ANO", "pontos" => 0],
+    ["turma" => "1° EM", "pontos" => 0],
+    ["turma" => "2° EM", "pontos" => 0],
+    ["turma" => "3° EM", "pontos" => 0]
 ];
 
-/* ORGANIZA */
-usort($classificacao, function($a, $b){
-    return $b['pontos'] - $a['pontos'];
-});
-?>
 
+// SOMA OS PONTOS
+foreach ($jogos as $jogo) {
+
+    foreach ($classificacao as &$time) {
+
+        if ($time["turma"] == $jogo["vencedor"]) {
+            $time["pontos"] += 3;
+        }
+
+    }
+
+}
+
+
+// ORGANIZA DO MAIOR PARA O MENOR
+usort($classificacao, function($a, $b){
+    return $b["pontos"] - $a["pontos"];
+});
+
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>

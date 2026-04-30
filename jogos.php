@@ -1,4 +1,5 @@
-<?php 
+<?php
+
 $turmas = ["9° ANO", "1° EM", "2° EM", "3° EM"];
 
 $modalidades = [
@@ -13,24 +14,45 @@ $modalidades = [
     "QUEIMADA"
 ];
 
-$jogos = [];
+$arquivo = "jogos.json";
+
+
+// SE O JSON EXISTIR
+if (file_exists($arquivo)) {
+    $jogos = json_decode(file_get_contents($arquivo), true);
+} else {
+    $jogos = [];
+}
+
 $mensagem = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
     $equipe1 = $_POST["equipe1"];
     $equipe2 = $_POST["equipe2"];
     $modalidade = $_POST["modalidade"];
     $vencedor = $_POST["vencedor"];
 
     if ($equipe1 == $equipe2) {
+
         $mensagem = "As equipes não podem ser iguais!";
+
     } else {
-        $jogos[] = [
+
+        $novoJogo = [
             "equipe1" => $equipe1,
             "equipe2" => $equipe2,
             "modalidade" => $modalidade,
             "vencedor" => $vencedor
         ];
+
+        $jogos[] = $novoJogo;
+
+        // SALVA NO JSON
+        file_put_contents(
+            $arquivo,
+            json_encode($jogos, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE)
+        );
 
         $mensagem = "Jogo cadastrado com sucesso!";
     }
