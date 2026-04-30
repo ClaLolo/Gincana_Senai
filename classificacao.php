@@ -1,7 +1,7 @@
 <?php
 $classificacao = [
-    ["turma" => "1° EM", "pontos" => 2],
     ["turma" => "2° EM", "pontos" => 3],
+    ["turma" => "1° EM", "pontos" => 2],
     ["turma" => "9° ANO", "pontos" => 1],
     ["turma" => "3° EM", "pontos" => 0]
 ];
@@ -22,11 +22,12 @@ $classificacao = [
     <header>
         <div class="logo">🏆 Circuito SENAI</div>
         <nav>
-            <a href="index.html">Sobre</a>
-            <a href="index.html#modalidades">Modalidades</a>
-            <a href="index.html#cronograma">Cronograma</a>
-            <a href="jogos.php">Cadastrar Jogos</a>
-            <a href="classificacao.php">Classificação</a>
+             <a href="index.html">início</a>
+    <a href="#sobre">Sobre</a>
+    <a href="#modalidades">Modalidades</a>
+    <a href="#cronograma">Cronograma</a>
+    <a href="jogos.php">Cadastrar Jogos</a>
+    <a href="classificacao.php">Classificação</a>
         </nav>
     </header>
 
