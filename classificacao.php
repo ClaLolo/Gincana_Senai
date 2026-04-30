@@ -1,7 +1,7 @@
 <?php
 $classificacao = [
-    ["turma" => "1° EM", "pontos" => 3],
-    ["turma" => "2° EM", "pontos" => 2],
+    ["turma" => "1° EM", "pontos" => 2],
+    ["turma" => "2° EM", "pontos" => 3],
     ["turma" => "9° ANO", "pontos" => 1],
     ["turma" => "3° EM", "pontos" => 0]
 ];
