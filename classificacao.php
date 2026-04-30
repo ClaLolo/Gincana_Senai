@@ -1,10 +1,15 @@
 <?php
 $classificacao = [
-    ["turma" => "2° EM", "pontos" => 3],
-    ["turma" => "1° EM", "pontos" => 2],
-    ["turma" => "9° ANO", "pontos" => 1],
-    ["turma" => "3° EM", "pontos" => 0]
+    ["turma" => "2° EM", "pontos" => 6],
+    ["turma" => "1° EM", "pontos" => 3],
+    ["turma" => "9° ANO", "pontos" => 2],
+    ["turma" => "3° EM", "pontos" => 1]
 ];
+
+/* ORGANIZA */
+usort($classificacao, function($a, $b){
+    return $b['pontos'] - $a['pontos'];
+});
 ?>
 
 <!DOCTYPE html>
