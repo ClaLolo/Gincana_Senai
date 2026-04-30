@@ -6,28 +6,30 @@
 }
 
 body {
-  background: #fff8fc;
-  padding: 30px;
+  background-color: #fff8fc;
   color: #333;
+  padding: 20px;
 }
 
+/* BANNER */
 .top-banner {
-  display: block;
-  max-width: 1100px;
   width: 100%;
-  margin: 0 auto 30px auto;
-  border-radius: 25px;
+  max-width: 1000px;
+  display: block;
+  margin: auto;
+  margin-bottom: 20px;
+  border-radius: 10px;
 }
-
 
 /* HEADER */
 .header {
-  max-width: 1100px;
-  margin: 0 auto 30px auto;
-  background: white;
-  padding: 18px 30px;
-  border-radius: 20px;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  background-color: white;
+  max-width: 1000px;
+  margin: auto;
+  margin-bottom: 20px;
+  padding: 15px;
+  border-radius: 10px;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -35,80 +37,74 @@ body {
 
 .logo {
   color: #3f22ec;
+  font-size: 20px;
   font-weight: bold;
-}
-
-.menu {
-  display: flex;
-  gap: 20px;
 }
 
 .menu a {
   text-decoration: none;
-  color: #555;
-  font-weight: 500;
+  color: #333;
+  margin-left: 15px;
 }
 
 .menu a:hover {
-  color: #3f22ec;
+  color: #fa58a7;
 }
 
-/* CARDS */
+/* CARD */
 .card-box {
-  max-width: 900px;
-  margin: 0 auto 30px auto;
-  background: white;
-  padding: 40px;
-  border-radius: 25px;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+  background-color: white;
+  max-width: 850px;
+  margin: auto;
+  margin-bottom: 20px;
+  padding: 30px;
+  border-radius: 10px;
 }
 
 .card-box h2 {
   text-align: center;
   color: #3f22ec;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
 }
 
-/* FORM */
+/* FORMULÁRIO */
 .form-jogo {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 12px;
 }
 
 .form-jogo label {
-  color: #3f22ec;
   font-weight: bold;
+  color: #3f22ec;
 }
 
 .form-jogo select {
-  padding: 14px;
-  border-radius: 12px;
-  border: 1px solid #ddd;
-  background: #fafafa;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
 }
 
 .form-jogo button {
   margin-top: 10px;
-  padding: 14px;
-  border: none;
-  border-radius: 12px;
-  background: linear-gradient(135deg, #fa58a7, #3f22ec);
+  padding: 12px;
+  background-color: #3f22ec;
   color: white;
-  font-weight: bold;
+  border: none;
+  border-radius: 8px;
   cursor: pointer;
 }
 
 .form-jogo button:hover {
-  opacity: 0.9;
+  background-color: #fa58a7;
 }
 
 /* MENSAGEM */
 .mensagem {
   margin-top: 15px;
   text-align: center;
-  font-weight: bold;
   color: #3f22ec;
+  font-weight: bold;
 }
 
 /* TABELA */
@@ -118,13 +114,13 @@ body {
 }
 
 .tabela-jogos th {
-  background: #3f22ec;
+  background-color: #3f22ec;
   color: white;
-  padding: 12px;
 }
 
+.tabela-jogos th,
 .tabela-jogos td {
-  padding: 12px;
+  border: 1px solid #ddd;
+  padding: 10px;
   text-align: center;
-  border-bottom: 1px solid #eee;
 }
