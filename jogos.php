@@ -24,6 +24,7 @@ if (file_exists($arquivo)) {
     $jogos = [];
 }
 
+$mensagem = "";
 
 //define uma mensagem de sucesso ou erro.
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
