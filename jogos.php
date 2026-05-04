@@ -1,5 +1,5 @@
 <?php
-//Define as turmas, as modalidades e o nome do arquivo
+// define as turmas e as modalidades
 $turmas = ["9° ANO", "1° EM", "2° EM", "3° EM"];
 
 $modalidades = [
@@ -14,32 +14,37 @@ $modalidades = [
     "QUEIMADA"
 ];
 
+// nome do arquivo onde salva os jogos
 $arquivo = "jogos.json";
 
 
-// SE O JSON EXISTIR
+// se o arquivo existir, pega os jogos
 if (file_exists($arquivo)) {
     $jogos = json_decode(file_get_contents($arquivo), true);
 } else {
-    $jogos = [];
+    $jogos = []; // se não existir, começa vazio
 }
 
-$mensagem = "";
+$mensagem = ""; // mensagem que vai aparecer na tela
 
-//define uma mensagem de sucesso ou erro.
+
+// quando o formulário é enviado
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
+    // pega os dados do formulário
     $equipe1 = $_POST["equipe1"];
     $equipe2 = $_POST["equipe2"];
     $modalidade = $_POST["modalidade"];
     $vencedor = $_POST["vencedor"];
 
+    // verifica se as equipes são iguais
     if ($equipe1 == $equipe2) {
 
         $mensagem = "As equipes não podem ser iguais!";
 
     } else {
 
+        // cria um novo jogo
         $novoJogo = [
             "equipe1" => $equipe1,
             "equipe2" => $equipe2,
@@ -47,9 +52,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             "vencedor" => $vencedor
         ];
 
+        // adiciona na lista de jogos
         $jogos[] = $novoJogo;
 
-        // SALVA NO JSON
+        // salva no arquivo JSON
         file_put_contents(
             $arquivo,
             json_encode($jogos, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE)
@@ -63,14 +69,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8"> <!-- acentos -->
     <title>Cadastro de Jogos</title>
-    <link rel="stylesheet" href="jogos.css">
+    <link rel="stylesheet" href="jogos.css"> <!-- css -->
 </head>
 <body>
 
+<!-- imagem de cima -->
 <img src="img/Circuito SENAI.png" alt="" class="top-banner">
 
+<!-- menu -->
 <header class="header">
   <div class="logo"> Circuito SENAI</div>
   <nav class="menu">
@@ -83,6 +91,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   </nav>
 </header>
 
+<!-- formulário -->
 <section class="card-box">
     <h2>Cadastro de Jogos</h2>
 
@@ -90,30 +99,32 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         <label>Equipe 1</label>
         <select name="equipe1" required>
-            <?php foreach ($turmas as $turma) echo "<option>$turma</option>"; ?>
+            <?php foreach ($turmas as $turma) echo "<option>$turma</option>"; ?> <!-- lista as turmas -->
         </select>
 
         <label>Equipe 2</label>
         <select name="equipe2" required>
-            <?php foreach ($turmas as $turma) echo "<option>$turma</option>"; ?>
+            <?php foreach ($turmas as $turma) echo "<option>$turma</option>"; ?> <!-- lista as turmas -->
         </select>
 
         <label>Modalidade</label>
         <select name="modalidade" required>
-            <?php foreach ($modalidades as $modalidade) echo "<option>$modalidade</option>"; ?>
+            <?php foreach ($modalidades as $modalidade) echo "<option>$modalidade</option>"; ?> <!-- lista as modalidades -->
         </select>
 
         <label>Vencedor</label>
         <select name="vencedor" required>
-            <?php foreach ($turmas as $turma) echo "<option>$turma</option>"; ?>
+            <?php foreach ($turmas as $turma) echo "<option>$turma</option>"; ?> <!-- lista as turmas -->
         </select>
 
         <button type="submit">Salvar Jogo</button>
 
+        <!-- mostra a mensagem -->
         <?php if ($mensagem != "") echo "<p class='mensagem'>$mensagem</p>"; ?>
     </form>
 </section>
 
+<!-- tabela com os jogos -->
 <section class="card-box">
     <h2>Jogos Cadastrados</h2>
 
@@ -126,6 +137,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </tr>
 
         <?php
+        // mostra todos os jogos cadastrados
         foreach ($jogos as $jogo) {
             echo "<tr>
                     <td>{$jogo['equipe1']}</td>
