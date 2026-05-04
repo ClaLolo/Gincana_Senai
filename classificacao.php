@@ -1,5 +1,5 @@
 <?php
-
+//lê os jogos do arquivo JSON (se existir) e cria uma classificação
 $arquivo = "jogos.json";
 
 $jogos = [];

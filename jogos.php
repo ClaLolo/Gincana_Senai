@@ -1,5 +1,5 @@
 <?php
-
+//Define as turmas, as modalidades e o nome do arquivo
 $turmas = ["9° ANO", "1° EM", "2° EM", "3° EM"];
 
 $modalidades = [
@@ -24,8 +24,8 @@ if (file_exists($arquivo)) {
     $jogos = [];
 }
 
-$mensagem = "";
 
+//define uma mensagem de sucesso ou erro.
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $equipe1 = $_POST["equipe1"];
