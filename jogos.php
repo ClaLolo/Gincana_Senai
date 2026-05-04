@@ -71,7 +71,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <img src="img/Circuito SENAI.png" alt="" class="top-banner">
 
 <header class="header">
-  <div class="logo">🏆 Circuito SENAI</div>
+  <div class="logo"> Circuito SENAI</div>
   <nav class="menu">
     <a href="index.html">início</a>
     <a href="index.html#sobre">Sobre</a>

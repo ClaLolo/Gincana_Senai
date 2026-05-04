@@ -51,7 +51,7 @@ usort($classificacao, function($a, $b){
     <img src="img/Circuito SENAI.png" alt="Banner Circuito SENAI" class="top-banner">
 
     <header>
-        <div class="logo">🏆 Circuito SENAI</div>
+        <div class="logo"> Circuito SENAI</div>
         <nav>
           <a href="index.html">início</a>
     <a href="index.html#sobre">Sobre</a>
